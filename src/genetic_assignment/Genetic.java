@@ -27,7 +27,7 @@ public final class Genetic {
 	}
 	
 	// Uniform Crossover is done
-	// Flip a coin for each chromosome to decide whether or not it’ll be included in the off-spring
+	// Flip a coin for each chromosome to decide whether or not itâ€™ll be included in the off-spring
 	// returns array with index 0 => parent 1 after crossover, index 1 => parent 2 after crossover
 	private static ArrayList<DoubleMatrix> crossover(DoubleMatrix parent1, DoubleMatrix parent2, double crossoverRate) {
 		
@@ -48,8 +48,7 @@ public final class Genetic {
 				child1.put(0, i, temp2);
 				child2.put(0, i, temp1);			
 			}
-			else {
-				
+			else {			
 				// Remains unchanged
 				child1.put(0, i, temp1);
 				child2.put(0, i, temp2);
@@ -64,11 +63,7 @@ public final class Genetic {
 
 	// Iterate population with crossover, mutation and recombination
 	public static ArrayList<DoubleMatrix> generateNewPopulation(DoubleMatrix errorContainer, 
-																			  ArrayList<DoubleMatrix> population, 
-																			  DoubleMatrix inputs, 
-																			  DoubleMatrix outputs,
-																			  double mutationRate){	
-		
+
 		ArrayList<DoubleMatrix> childSet = new ArrayList<DoubleMatrix>();
 		ArrayList<DoubleMatrix> mutatedParents = new ArrayList<DoubleMatrix>();
 		
