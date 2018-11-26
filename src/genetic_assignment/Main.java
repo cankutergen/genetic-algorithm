@@ -104,7 +104,7 @@ public class Main {
 				
 				// Generation and resizing weights from chromosome
 				DoubleMatrix weights1 = chromosome.getColumnRange(0, 0, totalWeights/2).reshape(3, 2);
-				DoubleMatrix weights2 = chromosome.getColumnRange(0, 6, totalWeights).reshape(2, 3);
+				DoubleMatrix weights2 = chromosome.getColumnRange(0, totalWeights/2, totalWeights).reshape(2, 3);
 				
 				// Calculation of y_pred and fitness error
 				DoubleMatrix yPred = Matrix.calculateYPred(inputs, weights1, weights2);
